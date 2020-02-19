@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>compare querySelector / querySelectorAll</h2>
+    <h3>1.使用querySelector指會有第一個被賦予值</h3>
+    <p id="text1"></p>
+    <p id="text1"></p>
+    <h3>2.使用querySelectorAll全部被賦予值</h3>
+    <p id="text2"></p>
+    <p id="text2"></p>
+    <ul class="ul1"></ul>
+  </body>
+</html>
+<script>
+  const el = document.querySelector("#text1");
+  el.textContent = "工程師1";
+  const el2 = document.querySelectorAll("#text2");
+  for (let i = 0; i < el2.length; i++) {
+    el2[i].textContent = "工程師2";
+  }
+  const el3 = document.querySelector("ul");
+  el3.setAttribute("id", "ul12345");
+  console.log(el3);
+</script>
